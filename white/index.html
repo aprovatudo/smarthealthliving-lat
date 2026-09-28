@@ -2,66 +2,76 @@
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Branquinho Assessoria</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Century Gothic', Arial, sans-serif;background:#0f1117;color:#e0f7fa;line-height:1.6}
-header{background:#0f1117;border-bottom:1px solid #006070;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:10}
-.logo{font-family:'Century Gothic', 'Gill Sans', sans-serif;font-size:.95rem;font-weight:700;color:#00bcd4;letter-spacing:.04em}
+body{font-family:'Segoe UI', Arial, sans-serif;background:#f5f6fa;color:#444;line-height:1.6}
+header{background:#ffffff;border-bottom:3px solid #3949ab;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:10}
+header h1{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:900;color:#1a1a2e;letter-spacing:.02em}
 nav ul{list-style:none;display:flex;gap:32px}
-nav a{color:#607d8b;text-decoration:none;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
-nav a:hover{color:#00bcd4}
-.hero{padding:100px 48px 80px;max-width:900px}
-.hero-tag{display:inline-block;border:1px solid #006070;color:#00bcd4;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;margin-bottom:32px}
-.hero h1{font-family:'Century Gothic', 'Gill Sans', sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:24px;color:#e0f7fa}
-.hero h1 em{color:#00bcd4;font-style:normal}
-.hero-desc{font-size:1.1rem;color:#607d8b;max-width:600px;margin-bottom:40px;line-height:1.8}
-.hero-cta{display:inline-block;background:#00bcd4;color:#0f1117;padding:16px 40px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
-.hero-cta:hover{background:#006070;color:#e0f7fa}
-.divider{border:none;border-top:1px solid #006070;margin:0 48px}
-.section{padding:72px 48px;max-width:960px;margin:0 auto}
-.sec-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#00bcd4;margin-bottom:12px}
-.sec-h2{font-family:'Century Gothic', 'Gill Sans', sans-serif;font-size:1.8rem;font-weight:700;color:#e0f7fa;margin-bottom:48px}
-.srv-item{display:flex;gap:32px;align-items:flex-start;padding:28px 0;border-bottom:1px solid #006070}
-.srv-item:last-child{border-bottom:none}
-.srv-n{font-family:'Century Gothic', 'Gill Sans', sans-serif;font-size:3rem;font-weight:700;color:#006070;min-width:72px;line-height:1;letter-spacing:-.02em}
-.srv-item h4{font-family:'Century Gothic', 'Gill Sans', sans-serif;font-size:1.05rem;font-weight:700;color:#00bcd4;margin-bottom:8px}
-.srv-item p{font-size:.9rem;color:#607d8b;line-height:1.7}
-.sobre-sec{background:#161b22;padding:72px 48px;margin-top:0}
-.sobre-inner{max-width:900px;margin:0 auto}
-.sobre-inner p{color:#607d8b;line-height:1.9;margin-bottom:16px;font-size:.98rem}
-.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;margin-top:48px;border:1px solid #006070}
-.meta-cell{padding:20px 24px;border-right:1px solid #006070}
-.meta-cell:last-child{border-right:none}
-.meta-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#00bcd4;margin-bottom:4px}
-.meta-value{font-size:.92rem;color:#e0f7fa;font-weight:600}
-.contato-sec{padding:72px 48px;max-width:960px;margin:0 auto}
-.contato-inner{border-left:2px solid #00bcd4;padding-left:32px;max-width:500px}
-.contato-inner p{color:#607d8b;margin-bottom:12px;font-size:.95rem;line-height:1.7}
-.contato-inner a{color:#00bcd4;text-decoration:none}
-footer{background:#161b22;border-top:1px solid #006070;padding:24px 48px;display:flex;justify-content:space-between;font-size:.78rem;color:#37474f}
-@media(max-width:600px){.hero{padding:60px 24px}.section,.contato-sec{padding:48px 24px}nav{display:none}.srv-n{font-size:2rem;min-width:48px}}
+nav a{color:#3949ab;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+nav a:hover{color:#283593}
+.hero{display:grid;grid-template-columns:1fr 380px;min-height:480px}
+.hero-left{background:#f5f6fa;padding:64px 40px 64px 40px;display:flex;flex-direction:column;justify-content:center}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.18em;color:#3949ab;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+.hero-left h2{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:2.6rem;font-weight:900;color:#1a1a2e;line-height:1.15;margin-bottom:20px}
+.hero-left h2 em{color:#3949ab;font-style:normal}
+.hero-left p{color:#444;font-size:1rem;max-width:480px;margin-bottom:32px;line-height:1.75}
+.hero-cta{display:inline-block;background:#3949ab;color:white;padding:14px 32px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.hero-cta:hover{background:#283593}
+.hero-right{background:#3949ab;color:#ffffff;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero-right h3{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;opacity:.7;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.info-item{border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:16px}
+.info-item:last-child{border-bottom:none;padding-bottom:0}
+.info-label{font-size:.75rem;opacity:.65;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.info-value{font-size:1rem;font-weight:600}
+.section{max-width:960px;margin:72px auto;padding:0 40px}
+.section-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#3949ab;font-weight:700;margin-bottom:12px}
+.section h2{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1.7rem;font-weight:900;color:#1a1a2e;margin-bottom:40px}
+.srv-row{display:flex;gap:24px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e8eaf6}
+.srv-row:last-child{border-bottom:none}
+.srv-num{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:2rem;font-weight:900;color:#3949ab;opacity:.3;min-width:56px;line-height:1}
+.srv-body h4{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.srv-body p{font-size:.9rem;color:#444;line-height:1.65}
+.sobre-grid{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.sobre-text p{color:#444;line-height:1.85;margin-bottom:16px}
+.stats-panel{background:#e8eaf6;border-left:4px solid #3949ab;padding:28px}
+.stats-panel p{font-size:.88rem;color:#444;margin-bottom:10px;line-height:1.5}
+.stats-panel p strong{color:#283593;display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+.contato-box{background:#e8eaf6;border-left:4px solid #3949ab;padding:32px;max-width:560px}
+.contato-box p{font-size:.95rem;color:#444;margin-bottom:12px;line-height:1.6}
+.contato-box a{color:#3949ab;text-decoration:none;font-weight:600}
+footer{background:#1a1a2e;color:#6677aa;padding:28px 40px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;margin-top:80px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-right{display:none}.sobre-grid{grid-template-columns:1fr}nav{display:none}}
 </style></head><body>
-<header><span class="logo">Branquinho Assessoria</span><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
+<header><h1>Branquinho Assessoria</h1><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
 <div id="hero" class="hero">
-  <div class="hero-tag">Contabilidade · Gestão · Confiança</div>
-  <h1>Sua empresa merece <em>contabilidade</em> de <em>excelência</em></h1>
-  <p class="hero-desc">A Branquinho Assessoria oferece soluções contábeis completas para empresas que buscam crescimento seguro e organizado. Com expertise e dedicação, transformamos números em estratégia para o seu negócio.</p>
-  <a href="#contato" class="hero-cta">Iniciar conversa</a>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Contabilidade · Gestão · Confiança</p>
+    <h2>Sua empresa merece <em>contabilidade</em> de <em>excelência</em></h2>
+    <p>A Branquinho Assessoria oferece soluções contábeis completas e personalizadas para empresas de todos os portes em Ribeirão Preto. Nosso objetivo é simplificar sua gestão financeira e fiscal, permitindo que você se concentre no crescimento do negócio.</p>
+    <a href="#contato" class="hero-cta">Falar com especialista</a>
+  </div>
+  <div class="hero-right">
+    <h3>Branquinho Assessoria</h3>
+    <div class="info-item"><div class="info-label">Fundação</div><div class="info-value">2003</div></div>
+    <div class="info-item"><div class="info-label">Localização</div><div class="info-value">Ribeirao Preto — SP</div></div>
+    
+    <div class="info-item"><div class="info-label">CNPJ</div><div class="info-value">06.033.220/0001-06</div></div>
+  </div>
 </div>
-<hr class="divider">
-<div id="servicos" class="section"><p class="sec-label">Soluções</p><h2 class="sec-h2">Como atuamos</h2><div class="srv-item"><span class="srv-n">01</span><div><h4>Contabilidade Geral</h4><p>Escrituração completa e precisa de todas as operações contábeis da sua empresa.</p></div></div><div class="srv-item"><span class="srv-n">02</span><div><h4>Consultoria Fiscal</h4><p>Otimização tributária e planejamento fiscal para reduzir custos e aumentar eficiência.</p></div></div><div class="srv-item"><span class="srv-n">03</span><div><h4>Gestão Administrativa</h4><p>Controle financeiro e administrativo que proporciona clareza e segurança nas decisões.</p></div></div><div class="srv-item"><span class="srv-n">04</span><div><h4>Assessoria Contábil</h4><p>Orientação especializada para conformidade legal e melhor estruturação contábil.</p></div></div></div>
-<div id="sobre" class="sobre-sec"><div class="sobre-inner">
-  <p class="sec-label">Sobre a empresa</p><h2 class="sec-h2">Nossa organização</h2>
-  <p>A Branquinho Assessoria é uma empresa de contabilidade estabelecida em Ribeirão Preto, comprometida em fornecer soluções contábeis de alta qualidade. Atendemos empresas de diversos portes, oferecendo serviços personalizados que atendem às necessidades específicas de cada cliente.</p><p>Nossa equipe é formada por profissionais qualificados, atualizados com as legislações vigentes e tendências do mercado. Buscamos estabelecer relacionamentos duradouros baseados em confiança, transparência e resultados mensuráveis para o crescimento sustentável do seu negócio.</p>
-  <div class="meta-grid">
-    <div class="meta-cell"><div class="meta-label">Razão Social</div><div class="meta-value">Branquinho Assessoria E Contabilidade Ribeirao, Aberturas, Alteracoes De Empresas Ltda</div></div>
-    <div class="meta-cell"><div class="meta-label">CNPJ</div><div class="meta-value">06.033.220/0001-06</div></div>
-    <div class="meta-cell"><div class="meta-label">Estado</div><div class="meta-value">São Paulo</div></div>
-    <div class="meta-cell"><div class="meta-label">Fundação</div><div class="meta-value">2003</div></div>
+<div id="servicos" class="section"><p class="section-label">Como atuamos</p><h2>Nossas áreas de expertise</h2><div class="srv-row"><div class="srv-num">01</div><div class="srv-body"><h4>Contabilidade Geral</h4><p>Escrituração contábil completa e atualizada conforme as normas vigentes.</p></div></div><div class="srv-row"><div class="srv-num">02</div><div class="srv-body"><h4>Consultoria Fiscal</h4><p>Planejamento tributário estratégico para reduzir impostos e otimizar resultados.</p></div></div><div class="srv-row"><div class="srv-num">03</div><div class="srv-body"><h4>Gestão Empresarial</h4><p>Análise financeira e suporte decisório para o crescimento sustentável da empresa.</p></div></div><div class="srv-row"><div class="srv-num">04</div><div class="srv-body"><h4>Conformidade Legal</h4><p>Adequação às obrigações legais e regulamentações contábeis atualizadas.</p></div></div></div>
+<div id="sobre" class="section"><p class="section-label">Sobre a empresa</p><h2>Nossa empresa</h2>
+<div class="sobre-grid">
+  <div class="sobre-text"><p>A Branquinho Assessoria é uma empresa especializada em contabilidade e gestão empresarial, sediada em Ribeirão Preto. Desde sua fundação, atuamos com profissionalismo e dedicação para oferecer soluções contábeis que agregam valor aos nossos clientes.</p><p>Nosso diferencial está na combinação de conhecimento técnico aprofundado, atendimento personalizado e uso de tecnologias modernas. Acreditamos que uma boa contabilidade é a base para decisões empresariais assertivas e crescimento sustentável.</p></div>
+  <div class="stats-panel">
+    <p><strong>Razão Social</strong>Branquinho Assessoria E Contabilidade Ribeirao, Aberturas, Alteracoes De Empresas Ltda</p>
+    <p><strong>CNPJ</strong>06.033.220/0001-06</p>
+    <p><strong>Estado</strong>São Paulo</p>
+    <p><strong>Situação</strong>✅ Ativa</p>
   </div>
 </div></div>
-<div id="contato" class="contato-sec"><p class="sec-label">Fale conosco</p><h2 class="sec-h2">Entre em contato</h2>
-<div class="contato-inner">
-  <p>Respondemos em até 24 horas úteis.</p>
+<div id="contato" class="section"><p class="section-label">Fale conosco</p><h2>Fale conosco</h2>
+<div class="contato-box">
+  <p>Estamos disponíveis para apresentar nossas soluções.</p>
   <p><strong>Telefone:</strong> <a href="tel:+551636325526">(16) 3632-5526</a></p><p><strong>Endereço:</strong> R. Visconde De Inhauma, 490, Centro, Ribeirao Preto — SP, CEP 14010-100</p>
 </div></div>
-<footer><span>Branquinho Assessoria · CNPJ 06.033.220/0001-06</span><span>© 2003–2026 Branquinho Assessoria E Contabilidade Ribeirao, Aberturas, Alteracoes De Empresas Ltda</span></footer>
+<footer><span>Branquinho Assessoria — CNPJ 06.033.220/0001-06</span><span>© 2003–2026 Branquinho Assessoria E Contabilidade Ribeirao, Aberturas, Alteracoes De Empresas Ltda</span></footer>
 </body></html>
